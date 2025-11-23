@@ -6,7 +6,7 @@ variable "secrets_mount"  {
     }
 }
 variable "secrets" {
-    default = {
+    
         cart = {
             secrets_mount = "roboshop-dev"
             kv            = {
@@ -81,6 +81,6 @@ variable "secrets" {
                 ROOT_PASSWORD = "roboshop123"
             }
         }
-    }
+    
 }
 variable "token" {}
