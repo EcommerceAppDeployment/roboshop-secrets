@@ -3,6 +3,9 @@ variable "secrets_mount"  {
         roboshop-dev = {
             description = "secrets for roboshop-dev"
         }
+        roboshop-infra = {
+            description = "secrets for EC2 module"
+        }
     }
 }
 variable "secrets" {
@@ -79,6 +82,13 @@ variable "secrets" {
             kv              = {
                 ROOT_USER      = "roboshop"
                 ROOT_PASSWORD = "roboshop123"
+            }
+        }
+        ec2 = {
+            secret_mount = "roboshop-infra"
+            kv            = {
+                USER        = "ec2-user" 
+                PASSWORD    = "DevOps321"
             }
         }
     }
