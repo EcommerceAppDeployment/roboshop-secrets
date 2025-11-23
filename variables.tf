@@ -8,7 +8,7 @@ variable "secrets_mount"  {
 variable "secrets" {
     default = {
         cart = {
-            secrets_mount = "roboshop-dev"
+            secret_mount = "roboshop-dev"
             kv            = {
                 REDIS_HOST          = "redis-dev.sdevops.shop"
                 CATALOGUE_HOST      = "catalogue-dev.sdevops.shop"
