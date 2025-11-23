@@ -83,3 +83,4 @@ variable "secrets" {
         }
     }
 }
+variable "token" {}
