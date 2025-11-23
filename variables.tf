@@ -48,9 +48,9 @@ variable "secrets" {
             secret_mount    = "roboshop-dev"
             kv              = {
                 CART_HOST   = "cart-dev.sdevops.shop",
-                CART_PORT   =  "8080",
+                CART_PORT   =  8080,
                 USER_HOST   = "user-dev.sdevops.shop",
-                USER_PORT   = "8080",
+                USER_PORT   = 8080,
                 AMQP_HOST   = "rabbitmq-dev.sdevops.shop",
                 AMQP_USER   = "roboshop"
                 AMQP_PASS   = "roboshop123"
