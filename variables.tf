@@ -23,7 +23,9 @@ variable "secrets" {
             kv              = {
                 MONGO_URL     = "mongodb://mongodb-dev.sdevops.shop:27017/catalogue"
                 MONGO         = true
-                MONGO_IP      = "mongodb-dev.sdevops.shop"
+                DB_HOST      = "mongodb-dev.sdevops.shop"
+                DB_TYPE       = "mongo" 
+                APP_GIT_URL   = "https://github.com/roboshop-devops-project-v3/catalogue"   
             }
         }
         dispatch = {
@@ -37,11 +39,16 @@ variable "secrets" {
         frontend = {
             secret_mount    = "roboshop-dev"
             kv              = {
-                CATALOGUE_URL   = "http://catalogue-dev.sdevops.shop:8080/",
-                USER_URL        = "http://user-dev.sdevops.shop:8080/",
-                CART_URL        = "http://cart-dev.sdevops.shop:8080/",
-                SHIPPING_URL    = "http://shipping-dev.sdevops.shop:8080/",
-                PAYMENT_URL     = "http://payment-dev.sdevops.shop:8080/"
+                CATALOGUE_URL   = "http://catalogue-dev.sdevops.shop",
+                CATALOGUE_PORT  = 8080 ,
+                USER_URL        = "http://user-dev.sdevops.shop",
+                USER_PORT       = 8080 ,
+                CART_URL        = "http://cart-dev.sdevops.shop",
+                CART_PORT       = 8080 ,
+                SHIPPING_URL    = "http://shipping-dev.sdevops.shop",
+                SHIPPING_PORT   = 8080 ,
+                PAYMENT_URL     = "http://payment-dev.sdevops.shop",
+                PAYMENT_PORT    = 8080
             }
         }
         payment = {
@@ -61,6 +68,10 @@ variable "secrets" {
             kv              = {
                 CART_ENDPOINT   = "cart-dev.sdevops.shop:8080"
                 DB_HOST         = "mysql-dev.sdevops.shop"
+                DB_TYPE         = "mysql" 
+                APP_GIT_URL     = "https://github.com/roboshop-devops-project-v3/shipping"
+                DB_USER         = "root" 
+                DB_PASS         = "RoboShop@1" 
             }
         }
         user    = {
