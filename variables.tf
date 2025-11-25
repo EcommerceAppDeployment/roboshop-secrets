@@ -15,14 +15,14 @@ variable "secrets" {
             kv            = {
                 REDIS_HOST          = "redis-dev.sdevops.shop"
                 CATALOGUE_HOST      = "catalogue-dev.sdevops.shop"
-                CATALOGUE_PORT      = 8080
+                CATALOGUE_PORT      = "8080"
             }
         }
         catalogue ={
             secret_mount    = "roboshop-dev"
             kv              = {
                 MONGO_URL     = "mongodb://mongodb-dev.sdevops.shop:27017/catalogue"
-                MONGO         = true
+                MONGO         = "true"
                 DB_HOST      = "mongodb-dev.sdevops.shop"
                 DB_TYPE       = "mongo" 
                 APP_GIT_URL   = "https://github.com/roboshop-devops-project-v3/catalogue"   
@@ -40,24 +40,24 @@ variable "secrets" {
             secret_mount    = "roboshop-dev"
             kv              = {
                 CATALOGUE_URL   = "http://catalogue-dev.sdevops.shop",
-                CATALOGUE_PORT  = 8080 ,
+                CATALOGUE_PORT  = "8080" ,
                 USER_URL        = "http://user-dev.sdevops.shop",
-                USER_PORT       = 8080 ,
+                USER_PORT       = "8080" ,
                 CART_URL        = "http://cart-dev.sdevops.shop",
-                CART_PORT       = 8080 ,
+                CART_PORT       = "8080" ,
                 SHIPPING_URL    = "http://shipping-dev.sdevops.shop",
-                SHIPPING_PORT   = 8080 ,
+                SHIPPING_PORT   = '8080" ,
                 PAYMENT_URL     = "http://payment-dev.sdevops.shop",
-                PAYMENT_PORT    = 8080
+                PAYMENT_PORT    = "8080"
             }
         }
         payment = {
             secret_mount    = "roboshop-dev"
             kv              = {
                 CART_HOST   = "cart-dev.sdevops.shop",
-                CART_PORT   =  8080,
+                CART_PORT   =  "8080",
                 USER_HOST   = "user-dev.sdevops.shop",
-                USER_PORT   = 8080,
+                USER_PORT   = "8080",
                 AMQP_HOST   = "rabbitmq-dev.sdevops.shop",
                 AMQP_USER   = "roboshop"
                 AMQP_PASS   = "roboshop123"
