@@ -46,7 +46,7 @@ variable "secrets" {
                 CART_URL        = "http://cart-dev.sdevops.shop",
                 CART_PORT       = "8080" ,
                 SHIPPING_URL    = "http://shipping-dev.sdevops.shop",
-                SHIPPING_PORT   = '8080" ,
+                SHIPPING_PORT   = "8080" ,
                 PAYMENT_URL     = "http://payment-dev.sdevops.shop",
                 PAYMENT_PORT    = "8080"
             }
