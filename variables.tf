@@ -102,6 +102,12 @@ variable "secrets" {
                 PASSWORD    = "DevOps321"
             }
         }
+        github-runner = {
+            secret_mount = "roboshop-infra"
+            kv            = {
+                RUNNER_TOKEN = "BGPMM4PDG4FPVDTBZRQT6ULJFF4AC"
+            }
+        }
     }
 }
 variable "token" {}
