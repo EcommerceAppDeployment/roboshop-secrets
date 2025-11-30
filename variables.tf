@@ -105,7 +105,7 @@ variable "secrets" {
         github-runner = {
             secret_mount = "roboshop-infra"
             kv            = {
-                RUNNER_TOKEN = "BGPMM4PDG4FPVDTBZRQT6ULJFF4AC"
+                RUNNER_TOKEN = "BGPMM4NC4AO47VQFEQVGEJDJFPSEA"
             }
         }
     }
